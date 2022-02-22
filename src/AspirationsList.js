@@ -1,11 +1,21 @@
 import React from "react";
 import Aspirations from "./Aspirations";
 
-const AspirationsList = () => {
+const AspirationsList = ({aspiration}) => {
+  let aspirationList = aspiration.map(aspiration => {
+    return (
+        <Aspirations
+          key={aspiration.id}
+          id={aspiration.id}
+          goal={aspiration.aspiration}
+          reason={aspiration.why}
+          />
+    )
+  })
+
   return (
     <div>
-      <h4>My aspirations are...</h4>
-      <Aspirations />
+      {aspirationList}
     </div>
   )
 }

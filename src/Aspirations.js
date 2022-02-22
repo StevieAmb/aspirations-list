@@ -1,8 +1,12 @@
 import React from "react";
 
-const Aspirations = () => {
+const Aspirations = ({goal, reason}) => {
   return (
-    <h4>Write a book by age 50</h4>
+    <div>
+      <h3>My Goal</h3>
+      <h4>{goal}</h4>
+      <h5>{reason}</h5>
+    </div>
   )
 }
 
